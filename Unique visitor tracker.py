@@ -1,42 +1,17 @@
-# -------- LIST MANAGER --------
-nums = [44, 12, 88, 5, 33, 88, 7]
+visitors = ["alice", "bob", "alice", "carol", "bob", "dave", "alice"]
 
-# 1. Append 99
-nums.append(99)
-print(nums)
+# 1. Total visits
+print("Total visits:", len(visitors))
 
-# 2. Insert 0 at index 2
-nums.insert(2, 0)
-print(nums)
+# 2. Unique visitors
+unique = set(visitors)
+print("Unique visitors:", unique)
 
-# 3. Remove first 88
-nums.remove(88)
-print(nums)
+# 3. Count of unique visitors
+print("Unique count:", len(unique))
 
-# 4. Sort ascending
-nums.sort()
-print(nums)
+# 4. Check if "eve" visited
+print("Did eve visit?", "eve" in unique)
 
-# 5. Pop last item
-nums.pop()
-print(nums)
-
-# 6. Count of 88
-print(nums.count(88))
-
-# 7. Index of 33
-print(nums.index(33))
-
-
-# -------- SET (UNIQUE VISITORS) --------
-visitors = ["user1", "user2", "user1", "user3", "user2"]
-
-unique_visitors = set(visitors)
-print(unique_visitors)
-
-# Check if a user visited
-user = "user1"
-if user in unique_visitors:
-    print(user, "visited")
-else:
-    print(user, "did not visit")
+# 5. Check if "bob" visited
+print("Did bob visit?", "bob" in unique)
